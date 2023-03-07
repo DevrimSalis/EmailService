@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace EmailService.Application.Services
 {
-    public class EmailService : IEmailService
+    public class EmailManager : IEmailService
     {
         private readonly ICache _cache;
         private readonly IMessageQueue _queue;
         private readonly IRepository<Email> _repository;
 
-        public EmailService(ICache cache, IMessageQueue queue, IRepository<Email> repository)
+        public EmailManager(ICache cache, IMessageQueue queue, IRepository<Email> repository)
         {
             _cache = cache;
             _queue = queue;
